@@ -20,7 +20,7 @@ foreach($heading as $column_heading)
 $pdf->Cell(20,9,$column_heading,1);
 }}
 //code for print data
-$sql = "SELECT * from student_database";
+$sql = "SELECT * from student_database WHERE email_id = '".$emailpost."'";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
