@@ -71,6 +71,11 @@
                         <p><label>Student Name :</label> '.$row['name'].'</p>
                         <p><label>Phone Number :</label> '.$row['phone'].'</p>
                         <p><label>Email ID :</label> '.$row['email_id'].'</p>
+                        <form align="left" action="generate.php" method="POST">
+                            <input type="hidden" name="email" value="'.$row['email_id'].'">
+                            <input type="submit"style="width:100%" name="generatepdf" value="Generate PDF">
+                        </form>
+                        
                         <table border="1">
                             <tr>
                                 <th>Subject1</th>
